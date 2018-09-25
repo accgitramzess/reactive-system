@@ -1,0 +1,5 @@
+rootProject.name = 'reactive-system'
+
+include 'event-collector'
+include 'commons'
+
