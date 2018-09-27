@@ -1,4 +1,4 @@
-package event_collector.controller;
+package event.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,10 +9,9 @@ import static java.util.Collections.emptyList;
 
 @RestController
 @RequestMapping("event")
-public class EventCollector {
+public class EventController {
 
     public List<Object> collectEvents() {
-
         return emptyList();
     }
 }

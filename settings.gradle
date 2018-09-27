@@ -2,4 +2,7 @@ rootProject.name = 'reactive-system'
 
 include 'event-collector'
 include 'commons'
+include 'first-event-service'
+include 'second-event-service'
+include 'third-event-service'
 
