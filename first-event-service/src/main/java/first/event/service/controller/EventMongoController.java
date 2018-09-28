@@ -1,4 +1,4 @@
-package event.controller;
+package first.event.service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -8,21 +8,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import event.service.EventService;
+import commons.dao.Event;
+
+import first.event.service.service2.EventMongoService;
 
 @RestController
 @RequestMapping("info")
-public class EventController {
+public class EventMongoController {
 
-    private EventService eventService;
+    private EventMongoService service;
 
     @Autowired
-    public void setEventService(EventService eventService) {
-        this.eventService = eventService;
+    public void setService(EventMongoService service) {
+        this.service = service;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/events", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Object> collectEvents() {
-        return eventService.collectEvents();
+    public List<Event> collectEvents() {
+        return service.collectEvents();
     }
 }

@@ -12,7 +12,12 @@ buildscript {
 }
 
 ext {
-    springProjects = [project(':event-collector')]
+    springProjects = [
+            project(':event-collector'),
+            project(':first-event-service'),
+            project(':second-event-service'),
+            project(':third-event-service'),
+    ]
 }
 
 allprojects {
@@ -47,6 +52,8 @@ configure(springProjects) {
     apply plugin: 'org.springframework.boot'
 
     dependencies {
+        compile project(':commons')
+
         compile 'org.springframework.boot:spring-boot-starter-web'
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
