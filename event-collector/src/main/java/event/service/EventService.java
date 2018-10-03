@@ -1,15 +1,20 @@
 package event.service;
 
-import org.springframework.stereotype.Service;
+import event.repository.EventRepository;
 
 import java.util.List;
 
-import static java.util.Collections.emptyList;
+import commons.dao.Event;
 
-@Service
 public class EventService {
 
-    public List<Object> collectEvents() {
-        return emptyList();
+    private EventRepository eventRepository;
+
+    public EventService(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
+    }
+
+    public List<Event> collectEvents() {
+        return eventRepository.fetchEvents();
     }
 }
