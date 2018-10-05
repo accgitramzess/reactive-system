@@ -1,5 +1,7 @@
 package event.protocol;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -19,7 +21,7 @@ public class HttpProtocolProvider implements ProtocolProvider<Event> {
         return restTemplate.exchange(
                 baseUrl + uri,
                 HttpMethod.GET,
-                new HttpEntity(headers),
+                new HttpEntity<>(headers),
                 new ParameterizedTypeReference<List<T>>() {}, variables
         );
     }

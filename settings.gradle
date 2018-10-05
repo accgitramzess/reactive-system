@@ -5,3 +5,6 @@ include 'event-collector'
 include 'first-event-service'
 include 'second-event-service'
 include 'third-event-service'
+include 'eureka-server'
+include 'config-server'
+

@@ -1,14 +1,14 @@
-package event;
+package com.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
+@EnableConfigServer
 @EnableEurekaClient
-public class EventCollectorApplication {
+public class ConfigServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EventCollectorApplication.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 }
