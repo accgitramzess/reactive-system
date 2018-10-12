@@ -54,7 +54,9 @@ configure(springProjects) {
     dependencies {
         compile project(':commons')
         compile 'org.springframework.boot:spring-boot-starter-web'
+        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.1.RELEASE'
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
+        testCompile group: 'junit', name: 'junit', version: '4.12'
     }
 }
